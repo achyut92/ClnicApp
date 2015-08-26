@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jixiang.clinicapp" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/App_theme" >
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.ManageClinicActivity"
+            android:label="@string/title_activity_manage_clinic"
+            android:theme="@style/App_theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.OptionsActivity"
+            android:label="@string/title_activity_options"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.HomePageActivity"
+            android:label="@string/title_activity_home_page"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.ModifyClinicActivity"
+            android:label="@string/title_activity_modify_clinic"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.AddClinicActivity"
+            android:label="@string/title_activity_add_clinic" >
+        </activity>
+        <activity
+            android:name=".Activities.SpecificClinicActivity"
+            android:label="@string/title_activity_specific_clinic" >
+        </activity>
+    </application>
+
+</manifest>
