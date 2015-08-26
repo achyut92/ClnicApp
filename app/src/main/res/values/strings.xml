@@ -14,6 +14,6 @@
     <string name="serverReadPhpFileName">db_read.php</string>
     <string name="serverCreatePhpFileName">db_create.php</string>
     <string name="serverDeletePhpFileName">db_delete.php</string>
-    <string name="serverModifyPhpFileName">db_modify.php</string>
+    <string name="serverModifyPhpFileName">db_update.php</string>
 
 </resources>

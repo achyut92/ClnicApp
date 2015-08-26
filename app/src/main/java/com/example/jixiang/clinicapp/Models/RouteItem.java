@@ -18,6 +18,14 @@ import java.util.List;
  * Created by jixiang on 13/8/15.
  */
 public class RouteItem extends HashMap<String, String> {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     /**
      * Constructs a new empty {@code HashMap} instance.
      */

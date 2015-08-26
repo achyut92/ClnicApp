@@ -120,16 +120,16 @@ public class ManageClinicActivity extends ListActivity {
                 if (text == "") {
                     adapter = new SimpleAdapter(
                             ManageClinicActivity.this, result,
-                            R.layout.clinic_list, new String[]{"address1",
+                            R.layout.clinic_list, new String[]{"id","address1",
                             "aviva_code", "estate"},
-                            new int[]{R.id.address1, R.id.aviva_code, R.id.estate});
+                            new int[]{R.id.list_id,R.id.address1, R.id.aviva_code, R.id.estate});
                     setListAdapter(adapter);
                 } else {
                     adapter = new SimpleAdapter(
                             ManageClinicActivity.this, filteredResult,
-                            R.layout.clinic_list, new String[]{"address1",
+                            R.layout.clinic_list, new String[]{"id","address1",
                             "aviva_code", "estate"},
-                            new int[]{R.id.address1, R.id.aviva_code, R.id.estate});
+                            new int[]{R.id.list_id,R.id.address1, R.id.aviva_code, R.id.estate});
                     setListAdapter(adapter);
                 }
 

@@ -67,6 +67,7 @@ public class SpecificClinicActivity extends AppCompatActivity {
                     //new CreateNewClinic().execute(url);
                     Intent in = new Intent(getApplicationContext(),
                             ModifyClinicActivity.class);
+                    in.putExtra(ManageClinicActivity.TAG_CLINICID, clinic_id);
                     startActivityForResult(in, 100);
                 }
             };

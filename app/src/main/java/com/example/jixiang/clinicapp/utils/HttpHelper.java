@@ -114,6 +114,56 @@ public class HttpHelper {
 
             System.out.println(result);
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG);
+        } catch (ClientProtocolException e) {
+            // TODO Auto-generated catch block
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+        }
+
+        return result;
+    }
+
+
+    public static String modifyData(RouteItem item, String url){
+
+        String result = "";
+        // Create a new HttpClient and Post Header
+        HttpClient httpclient = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost(url);//"http://10.10.2.211:5000/createClinic"
+
+        try {
+            // Add your data
+            List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(5);
+            nameValuePairs.add(new BasicNameValuePair("func_no","1"));
+            nameValuePairs.add(new BasicNameValuePair("id", item.getId()));
+            nameValuePairs.add(new BasicNameValuePair("clinic", item.getEstate()));
+            nameValuePairs.add(new BasicNameValuePair("address_1", item.getAddress1()));
+            nameValuePairs.add(new BasicNameValuePair("address_2", item.getAviva_code()));
+            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+            // Execute HTTP Post Request
+            HttpResponse response = httpclient.execute(httppost);
+            // Log.d("Create Response", response.toString());
+
+            StatusLine statusLine = response.getStatusLine();
+            if (statusLine != null && statusLine.getStatusCode() == 200) {
+                HttpEntity entity2 = response.getEntity();
+                if (entity2 != null) {
+                    result = EntityUtils.toString(response.getEntity());
+                    if (result.contains("success")) {
+                        result = "success";
+                    } else {
+                        result = "falied";
+                    }
+                } else {
+                    result = "no relative data";
+                }
+            } else {
+                result = "send data failed";
+            }
+
+            System.out.println(result);
+            //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG);
 
 
         } catch (ClientProtocolException e) {
@@ -123,7 +173,6 @@ public class HttpHelper {
         }
 
         return result;
-
     }
 
 }

@@ -37,51 +37,50 @@
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:text="Full Name"/>
-            <EditText android:id="@+id/reg_fullname"
+                android:text="address_1"/>
+            <EditText android:id="@+id/modify_address_1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
                 android:singleLine="true"
-                android:layout_marginBottom="20dip"/>
+                android:layout_marginBottom="20dip"
+                android:hint="new address_1"/>
             <!--  Email Label -->
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:text="Email"/>
-            <EditText android:id="@+id/reg_email"
+                android:text="address_2"/>
+            <EditText android:id="@+id/modify_address_2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
                 android:singleLine="true"
-                android:layout_marginBottom="20dip"/>
+                android:layout_marginBottom="20dip"
+                android:hint="new address_2"/>
             <!-- Password Label -->
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:text="Password"/>
-            <EditText android:id="@+id/reg_password"
+                android:text="clinic"/>
+            <EditText android:id="@+id/modify_clinic"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:password="true"
                 android:singleLine="true"
-                android:layout_marginTop="5dip"/>
+                android:layout_marginTop="5dip"
+                android:hint="new clinic name"/>
             <!-- Register Button -->
-            <Button android:id="@+id/btnRegister"
+            <Button android:id="@+id/modify_submit"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-                android:text="Register New Account"/>
-            <!-- Link to Login Screen -->
-            <TextView android:id="@+id/link_to_login"
+                android:text="confirm modification"/>
+
+            <Button android:id="@+id/modify_back"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
-                android:layout_marginBottom="40dip"
-                android:text="Already has account! Login here"
-                android:gravity="center"
-                android:textSize="20dip"
-                android:textColor="#025f7c"/>
+                android:layout_marginTop="10dip"
+                android:text="Cancel"/>
+
 
         </LinearLayout>
         <!-- Registration Form Ends -->
